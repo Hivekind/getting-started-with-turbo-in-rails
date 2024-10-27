@@ -1,0 +1,10 @@
+<% if @post.comments.length > 0 %>
+  <p>
+    <strong>Comments:</strong>
+    <%= render @post.comments %>
+  </p>
+<% end %>
+
+<%= render "comments/form", comment: @post.comments.new %>
+
+<hr />
