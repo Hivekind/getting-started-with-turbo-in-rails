@@ -2,7 +2,8 @@
   <div>
     <p>
       <strong>Title:</strong>
-      <%= post.title %>
+      <%= post.title %><br />
+      <sub id="comment_count"><%= "(#{@post.comments.count}) comments" %></sub>
     </p>
 
     <p>

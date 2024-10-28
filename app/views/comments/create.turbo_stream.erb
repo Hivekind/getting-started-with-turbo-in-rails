@@ -1,0 +1,7 @@
+<%= turbo_stream.replace "comment_count" do %>
+  <sub id="comment_count">(<%= @post.comments.count %>) comments</sub>
+<% end %>
+
+<%= turbo_stream.append "comments", partial: "comments/comment", locals: { comment: @comment } %>
+
+<%= turbo_stream.remove "comment_form" %>

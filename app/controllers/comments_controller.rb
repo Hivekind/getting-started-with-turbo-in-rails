@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
       if @comment.save!
         format.html { render @comment.post }
         format.json { render :show, status: :created, location: @comment.post }
+        format.turbo_stream
       else
         format.html { render @comment.post, status: :unprocessable_entity }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
